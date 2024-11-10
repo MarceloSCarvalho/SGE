@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}SGE - adicionar Fornecedor {% endblock  %}
+
+{% block content %}
+<div class="container">
+    <h3 class="display-6">Cadastrar Fornecedor</h3>
+    <div class="card">
+        <div class="card-body">
+            <form action="" class="form" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Salvar Categoria</button>
+                <a href="{% url 'supplier_list' %}" class="btn btn-secondary">
+                    Cancelar e voltar para a lista de Fornecedores
+                </a>
+            </form>
+        </div>
+    </div>
+
+</div>
+{% endblock  %}
